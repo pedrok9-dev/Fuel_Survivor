@@ -82,7 +82,7 @@ class Obj{
 class Carro extends Obj{
 
     dir = 0
-    vida = 1000
+    vida = 1250
     pontos = 0
     frame = 1
     tempo = 0
@@ -133,9 +133,9 @@ class Carro extends Obj{
 
     collect(objeto){
         if(this.colid(objeto)){
-            this.vida += 100 
-            if(this.vida > 1000){
-                this.vida = 1000
+            this.vida += 125 
+            if(this.vida > 1250){
+                this.vida = 1250
             }
             objeto.recomeca()
         }
