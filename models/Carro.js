@@ -183,3 +183,11 @@ class Text{
         des.fillText(text,x,y)
     }
 }
+
+class Fundo extends Obj{
+    des_fundo(){
+        let img = new Image()
+        img.src = this.a
+        des.drawImage(img, this.x, this.y, this.w, this.h)
+    }
+}  

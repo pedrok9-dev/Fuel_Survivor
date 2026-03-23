@@ -6,11 +6,15 @@ let carroInimigo3 = new CarroInimigo(1700, 400, 80, 50, './img/carro_inim3bg.png
 let carro = new Carro(100, 325, 80, 50, './img/carroprin_01_bg.png')
 let galao = new Galao(1300, 400, 40, 80, './img/galaobg.png')
 let galao2 = new Galao(1300, 400, 40, 80, './img/galaobg.png')
-// let medidaCarro = new Carro(100, 325, 85, 50, 'green')
+
 
 let t1 = new Text()
 let t2 = new Text()
 let fase_txt = new Text()
+
+let fase1 = new Fundo(0, 0, 1200, 700,'./img/fase1.png')
+let fase2 = new Fundo(0, 0, 1200, 700,'./img/rua_fase2.png')
+let fase3 = new Fundo(0, 0, 1200, 700,'./img/rua_fase3.png')
 
 let motor = new Audio('./img/motor.wav')
 let batida = new Audio('./img/batida.mp3')
@@ -104,6 +108,13 @@ function pontuacao() {
 function desenha() {
 
     if (jogar) {
+         if (fase === 1) {
+            fase1.des_fundo()
+        } else if (fase === 2) {
+            fase2.des_fundo()
+        } else if (fase === 3) {
+            fase3.des_fundo()
+        }
         carroInimigo.des_carro()
         carroInimigo2.des_carro()
         carroInimigo3.des_carro()
