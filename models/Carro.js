@@ -89,10 +89,10 @@ class Carro extends Obj{
 
     mov_car(){
         this.y += this.dir
-        if(this.y < 62){
-            this.y = 62
-        }else if(this.y > 692){
-            this.y = 692
+        if(this.y < 174){
+            this.y = 174
+        }else if(this.y > 486){
+            this.y = 486
         }
     }
 
@@ -148,7 +148,7 @@ class CarroInimigo extends Obj{
 
     recomeca(){
         this.x = 1300
-        this.y =  Math.floor(Math.random() * (638 - 62) + 62)
+        this.y =  Math.floor(Math.random() * (486 - 174) + 174)
     }
 
     mov_car(){
@@ -164,7 +164,7 @@ class Galao extends Obj{
 
     recomeca(){
         this.x = 1300
-        this.y =  Math.floor(Math.random() * (638 - 62) + 62)
+        this.y =  Math.floor(Math.random() * (486 - 174) + 174)
     }
 
     mov_car(){

@@ -1,20 +1,21 @@
 let des = document.getElementById('des').getContext('2d')
 
 let carroInimigo = new CarroInimigo(1300, 325, 80, 50, './img/carro_inimbg.png')
-let carroInimigo2 = new CarroInimigo(1500, 125, 80, 50, './img/carro_inim2bg.png')
-let carroInimigo3 = new CarroInimigo(1700, 400, 80, 50, './img/carro_inim3bg.png')
+let carroInimigo2 = new CarroInimigo(1500, 175, 80, 50, './img/carro_inim2bg.png')
+let carroInimigo3 = new CarroInimigo(1700, 485, 80, 50, './img/carro_inim3bg.png')
 let carro = new Carro(100, 325, 80, 50, './img/carroprin_01_bg.png')
-let galao = new Galao(1300, 400, 40, 80, './img/galaobg.png')
-let galao2 = new Galao(1300, 400, 40, 80, './img/galaobg.png')
+let galao = new Galao(1300, 400, 40, 80, './img/galaoverbg.png')
+let galao2 = new Galao(1300, 400, 40, 80, './img/galaoamabg.png')
 
 
 let t1 = new Text()
 let t2 = new Text()
 let fase_txt = new Text()
 
-let fase1 = new Fundo(0, 0, 1200, 700,'./img/fase1.png')
-let fase2 = new Fundo(0, 0, 1200, 700,'./img/rua_fase2.png')
-let fase3 = new Fundo(0, 0, 1200, 700,'./img/rua_fase3.png')
+let fase1 = new Fundo(0, 0, 1200, 700,'./img/fase1img.png')
+let fase2 = new Fundo(0, 0, 1200, 700,'./img/fase2img.png')
+let fase3 = new Fundo(0, 0, 1200, 700,'./img/fase3img.png')
+let gameover = new Fundo(0, 0, 1200, 700,'./img/gameoverimg.png')
 
 let motor = new Audio('./img/motor.wav')
 let batida = new Audio('./img/batida.mp3')
@@ -22,7 +23,7 @@ motor.volume = 0.5
 motor.loop = true
 batida.volume = 0.5
 
-let jogar = true
+window.jogar = false
 let fase = 1
 
 document.addEventListener('keydown', (e) => {
@@ -143,8 +144,11 @@ function desenha() {
 
         fase_txt.des_text('Fase: ' + fase, 550, 40, 'white', '26px Arial')
     } else {
-        t1.des_text('GAME OVER', 450, 350, 'yellow', '60px Arial')
-        t2.des_text('Pontuação Final: ' + carro.pontos, 480, 400, 'white', '25px Arial')
+    gameover.des_fundo()
+    des.textAlign = 'center'
+    des.fillStyle = 'white'
+    des.font = 'bold 40px Arial'
+    des.fillText('PONTUAÇÃO: ' + carro.pontos, 600, 580)
     }
 
 }

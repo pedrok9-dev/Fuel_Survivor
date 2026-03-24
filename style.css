@@ -5,23 +5,80 @@
 }
 
 body {
+    height: 100vh;
+    overflow: hidden;
     background-image: url(./img/fundo.png);
     background-size: cover;          /* Faz a imagem cobrir a tela toda */
     background-position: center;     /* Centraliza a imagem */
     background-repeat: no-repeat;    /* Impede que a imagem se repita */
     background-attachment: fixed;    /* Deixa o fundo fixo ao rolar */
     color: rgb(186, 186, 186);
-    height: 100vh;                   /* Garante que o body tenha a altura da tela */
-    overflow: hidden;                /*Evita barras de rolagem desnecessárias */
 }
 
-canvas {
+/* ESCONDE O JOGO NO MENU */
+#des {
+    display: none;
     margin: auto;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(#1a1a1a, #3a3a3a); 
-    box-shadow: 0 0 20px rgba(0,0,0,0.5); 
+}
+
+/* TELAS */
+.tela {
+    display: none;
+}
+
+.tela.ativa {
+    display: flex;
+}
+
+/* MENU / TELAS */
+#menu, #instrucoes, #sobre {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    z-index: 999;
+    color: white;
+}
+
+/* FUNDO DO MENU */
+#menu {
+    background-image: url(./img/fundo.png);
+    background-size: cover;
+}
+
+/* (opcional) fundo das outras telas */
+#instrucoes {
+    background: #111;
+}
+
+#sobre {
+    background: #222;
+}
+
+/* BOTÕES */
+button {
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background: #810f0f;
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #963636;
 }

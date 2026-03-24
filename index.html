@@ -6,11 +6,34 @@
     <link rel="stylesheet" href="./style.css">
     <script src="./models/Carro.js"defer></script>
     <script src="./index.js"defer></script>
+    <script src="./menu.js"defer></script>
     <title>Game</title>
 </head>
 <body>
-    <canvas id="des" width="1200" height="700">
-        <h2>Seu navegador não tem suporte para esses gráficos</h2>
-    </canvas>
+ <!-- MENU -->
+ <div id="menu" class="tela ativa">
+    <button onclick="iniciarJogo()">Jogar</button>
+    <button onclick="mostrarInstrucoes()">📖Instruções</button>
+    <button onclick="mostrarSobre()">❕Sobre</button>
+</div>
+
+<!-- INSTRUÇÕES -->
+<div id="instrucoes" class="tela">
+    <h2>Instruções</h2>
+    <p>Use W/S ou ↑ ↓ para mover o carro</p>
+    <p>Desvie dos inimigos e colete galões</p>
+    <button onclick="voltarMenu()">Voltar</button>
+</div>
+
+<!-- SOBRE -->
+<div id="sobre" class="tela">
+    <h2>Sobre</h2>
+    <p>Jogo feito em JavaScript com Canvas</p>
+    <button onclick="voltarMenu()">Voltar</button>
+</div>
+
+<!-- JOGO -->
+<canvas id="des" width="1200" height="700"></canvas>
+
 </body>
 </html>
