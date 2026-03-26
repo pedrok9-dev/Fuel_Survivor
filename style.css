@@ -66,19 +66,27 @@ body {
     background: #222;
 }
 
-/* BOTÕES */
 button {
-    padding: 15px 30px;
-    margin: 10px;
-    font-size: 18px;
+    padding: 18px 36px;
+    margin: 8px;
+    font-size: 22px;
+    font-weight: bold;
     cursor: pointer;
     border: none;
-    border-radius: 8px;
-    background: #810f0f;
-    color: rgb(255, 255, 255);
-    transition: 0.3s;
+    border-radius: 14px;
+    background: linear-gradient(145deg, #b31212, #7a0c0c);   /* Gradiente mais bonito */
+    color: #fff;
+    box-shadow: 0 6px 0 #4d0707, 0 10px 20px rgba(0,0,0,0.4);  /* Sombra pra dar efeito 3D */
+    transition: all 0.2s ease-in-out;
 }
-
+/* Hover (quando passa o mouse) */
 button:hover {
-    background: #963636;
+    background: linear-gradient(145deg, #d61a1a, #8f1111);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 0 #4d0707, 0 12px 25px rgba(0,0,0,0.5);
+}
+/* Clique (efeito de apertar) */
+button:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #4d0707, 0 5px 10px rgba(0,0,0,0.3);
 }
