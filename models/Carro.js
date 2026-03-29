@@ -133,7 +133,7 @@ class Carro extends Obj{
 
     collect(objeto){
         if(this.colid(objeto)){
-            this.vida += 125 
+            this.vida += 100
             if(this.vida > 1250){
                 this.vida = 1250
             }
@@ -144,7 +144,7 @@ class Carro extends Obj{
 
 class CarroInimigo extends Obj{
 
-    vel = 10
+    vel = 8
 
     recomeca(){
         this.x = 1300
@@ -160,7 +160,7 @@ class CarroInimigo extends Obj{
 }
 
 class Galao extends Obj{
-    vel = 7
+    vel = 6
 
     recomeca(){
         this.x = 1300
