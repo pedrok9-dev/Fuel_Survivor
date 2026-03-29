@@ -36,3 +36,4 @@ window.voltarMenu = function () {
     esconderTudo()
     menu.classList.add('ativa')
 }
+

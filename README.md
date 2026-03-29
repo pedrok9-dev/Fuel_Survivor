@@ -88,3 +88,6 @@ Canvas API
 📖 Créditos
 
 Este projeto foi desenvolvido por Pedro, como parte das atividades da disciplina de Programação Orientada a Objetos, sob orientação do professor Carlos.
+
+
+link do jogo: https://fuel-survivor.vercel.app/
