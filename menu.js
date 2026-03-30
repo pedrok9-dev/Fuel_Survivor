@@ -11,12 +11,22 @@ function esconderTudo() {
     canvas.style.display = 'none'
 }
 
-// JOGAR
+// JOGAR (1 PLAYER)
 window.iniciarJogo = function () {
     esconderTudo()
 
     canvas.style.display = 'block'
     window.jogar = true
+    window.modo2p = false
+}
+
+// JOGAR 2 PLAYERS
+window.jogar2 = function () {
+    esconderTudo()
+
+    canvas.style.display = 'block'
+    window.jogar = true
+    window.modo2p = true
 }
 
 // INSTRUÇÕES

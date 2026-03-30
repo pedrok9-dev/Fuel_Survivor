@@ -133,7 +133,7 @@ class Carro extends Obj{
 
     collect(objeto){
         if(this.colid(objeto)){
-            this.vida += 100
+            this.vida += 175
             if(this.vida > 1250){
                 this.vida = 1250
             }
