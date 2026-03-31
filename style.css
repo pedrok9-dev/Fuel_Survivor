@@ -63,39 +63,7 @@ body {
 }
 
 #sobre {
-    background-image: url(./img/sobre.png);
-    height: 100vh;
-    overflow: hidden;
-    background-size: cover;          /* Faz a imagem cobrir a tela toda */
-    background-position: center;     /* Centraliza a imagem */
-    background-repeat: no-repeat;    /* Impede que a imagem se repita */
-    background-attachment: fixed;    /* Deixa o fundo fixo ao rolar */
-    color: rgb(186, 186, 186);
-}
-
-button.voltar{
-    padding: 18px 36px;
-    margin: 8px;
-    font-size: 22px;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    border-radius: 14px;
-    background: linear-gradient(145deg, #b31212, #7a0c0c);   /* Gradiente mais bonito */
-    color: #fff;
-    box-shadow: 0 6px 0 #4d0707, 0 10px 20px rgba(0,0,0,0.4);  /* Sombra pra dar efeito 3D */
-    transition: all 0.2s ease-in-out;
-}
-
-button.voltar:hover {
-    background: linear-gradient(145deg, #d61a1a, #8f1111);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 0 #4d0707, 0 12px 25px rgba(0,0,0,0.5);
-}
-
-button.voltar:active {
-    transform: translateY(4px);
-    box-shadow: 0 2px 0 #4d0707, 0 5px 10px rgba(0,0,0,0.3);
+   background: #111;
 }
 
 button {
