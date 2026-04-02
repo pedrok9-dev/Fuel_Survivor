@@ -10,7 +10,7 @@ let carro = new Carro(100, 325, 80, 50, './img/carroprin_01_bg.png')
 // PLAYER 2
 let carro2 = new Carro(100, 175, 80, 50, './img/carroprin2_01_bg.png')
 
-let galao = new Galao(1300, 400, 40, 80, './img/galaoverbg.png')
+let galao = new Galao(1100, 400, 40, 80, './img/galaoverbg.png')
 let galao2 = new Galao(1300, 400, 40, 80, './img/galaoamabg.png')
 
 let t1 = new Text()
@@ -284,7 +284,7 @@ function atualiza() {
         carro.mov_car()
 
         if (modo2p) {
-            carro2.mov_car()
+            carro2.mov_car2()
             carro2.collect(galao)
             carro2.collect(galao2)
         }

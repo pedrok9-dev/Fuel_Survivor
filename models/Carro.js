@@ -91,6 +91,15 @@ class Carro extends Obj{
         this.y += this.dir
         if(this.y < 174){
             this.y = 174
+        }else if(this.y > 290){
+            this.y = 290
+        }
+    }
+
+    mov_car2(){
+        this.y += this.dir
+        if(this.y < 350){
+            this.y = 350
         }else if(this.y > 486){
             this.y = 486
         }
