@@ -3,91 +3,99 @@
 1. Identificação do Projeto
 
 Título do Projeto: Fuel Survivor
-
 Desenvolvedor: Pedro
 
-Professor Orientador: Carlos
-
-Disciplina: Programação Orientada a Objetos
 
 2. Visão Geral do Sistema
 
-📌 Descrição
+🎮 Descrição
 
-O Fuel Survivor é um jogo digital desenvolvido com tecnologias web, utilizando HTML, Canvas API e JavaScript. O sistema consiste em um game 2D no qual o jogador controla um veículo com o objetivo de sobreviver o maior tempo possível, gerenciando seus recursos e evitando obstáculos.
+Este software consiste em um jogo de corrida 2D desenvolvido em JavaScript utilizando o elemento "canvas" do HTML. O jogador controla um carro que deve desviar de obstáculos e sobreviver o máximo possível.
 
 🎯 Objetivo
 
-O objetivo principal do jogo é conduzir um carro ao longo de diferentes cenários, coletando galões de combustível para manter sua sobrevivência, enquanto evita colisões com veículos inimigos. O jogador deve acumular pontos suficientes para avançar entre as fases e alcançar a vitória.
+O objetivo do jogo é desviar dos carros inimigos, coletar galões de combustível para recuperar vida e alcançar a pontuação necessária para avançar de fase e vencer.
 
-🌍 Tema
+🏁 Tema
 
-O jogo apresenta um tema de sobrevivência em ambiente rodoviário, no qual o combustível representa diretamente a vida do jogador. A progressão ocorre em três cenários distintos:
-
-Fase 1: Deserto
-
-Fase 2: Cidade
-
-Fase 3: Cidade com neve
-
-Cada fase apresenta aumento gradual na dificuldade, proporcionando maior desafio ao jogador.
+O tema do jogo é corrida em estrada, onde o jogador dirige um carro em alta velocidade evitando colisões com outros veículos e coletando recursos ao longo do caminho.
 
 🎮 Instruções de Jogabilidade
-Controles:
 
-W ou Seta para cima (↑): Movimentar o carro para cima
+1 Jogador:
+W → mover para cima
+S → mover para baixo
 
-S ou Seta para baixo (↓): Movimentar o carro para baixo
+2 Jogadores:
+Player 1: W (cima) / S (baixo)
+Player 2: ↑ (cima) / ↓ (baixo)
 
 Mecânicas:
-
-O movimento do veículo é restrito ao eixo vertical (cima e baixo).
-
-O jogador deve coletar galões de combustível para manter sua vida.
-
-O combustível diminui com o tempo, funcionando como um sistema de vida.
-
-Colisões com veículos inimigos resultam na perda de combustível.
-
-A ausência de coleta de combustível leva à derrota do jogador.
+🚗 Desvie dos carros inimigos para não perder vida
+⛽ Colete galões para recuperar vida
+❤️ A vida diminui com o tempo e ao colidir
 
 ⚙️ Especificações Técnicas
+Sistema de Vida:
+Vida inicial: 1250
+Colisão com inimigos: -125 de vida
+Dano contínuo: -1 por frame
+Coleta de galão: +175 de vida (máximo 1250)
+
+Sistema de Pontuação:
+Pontos aumentam ao desviar com sucesso dos inimigos
 
 Progressão de Fases:
+Fase 1: início do jogo
+Fase 2: ao atingir mais de 30 pontos (aumento de velocidade)
+Fase 3: ao atingir mais de 60 pontos (maior dificuldade)
 
-Ao atingir 30 pontos, o jogador avança para a Fase 2.
+Vitória:
+Alcançar mais de 90 pontos na fase 3
 
-Ao atingir 60 pontos, o jogador avança para a Fase 3.
+Game Over:
+Vida chegar a 0
+No modo 2 jogadores: qualquer jogador morrer encerra o jogo
 
-Ao atingir 90 pontos, o jogador vence o jogo.
+👥 Créditos
+Desenvolvedor: Pedro
+Product Owner / Professor: Carlos
 
-Sistema de Vida:
+📌 Observações
+O jogo possui modo de 1 jogador e 2 jogadores
 
-A vida do jogador é representada pelo nível de combustível.
+📋 Regras de Negócio
+O jogador inicia com 1250 de vida
+A vida nunca pode ultrapassar o valor máximo (1250)
+Colidir com carros inimigos reduz 125 de vida
+O jogador perde vida continuamente (-1) ao longo do tempo
+Coletar galões recupera 175 de vida
+A pontuação aumenta ao desviar corretamente dos inimigos
+A fase muda automaticamente conforme a pontuação
+No modo 2 jogadores, ambos devem sobreviver para vencer
+O jogo termina se a vida de um jogador chegar a 0
 
-O combustível é reduzido gradualmente ao longo do tempo.
+✅ Requisitos Funcionais
+RF01: O sistema deve permitir iniciar o jogo em modo 1 jogador
+RF02: O sistema deve permitir iniciar o jogo em modo 2 jogadores
+RF03: O jogador deve controlar o carro por meio do teclado
+RF04: O sistema deve detectar colisões entre carros
+RF05: O sistema deve contabilizar pontuação
+RF06: O sistema deve possuir sistema de fases progressivas
+RF07: O sistema deve exibir barra de vida dos jogadores
+RF08: O sistema deve permitir coleta de itens (galões)
+RF09: O sistema deve exibir tela de Game Over
+RF10: O sistema deve exibir tela de Vitória
+RF11: O sistema deve possuir menu inicial com navegação
 
-Colisões com inimigos aceleram a perda de vida.
+⚠️ Requisitos Não Funcionais
+RNF01: O jogo deve rodar em navegadores web modernos
+RNF02: O sistema deve responder em tempo real aos comandos do usuário
+RNF03: O jogo deve possuir interface simples e intuitiva
+RNF04: O sistema deve manter desempenho fluido (sem travamentos)
+RNF05: O jogo deve utilizar recursos visuais (imagens) e sonoros
 
-Nível de Dificuldade:
-
-A velocidade dos veículos inimigos aumenta a cada nova fase.
-
-O aumento de dificuldade exige maior precisão e tempo de reação do jogador.
-
-
-👨‍💻 Tecnologias Utilizadas
-
-HTML
-
-JavaScript
-
-Canvas API
-
-
-📖 Créditos
-
-Este projeto foi desenvolvido por Pedro, como parte das atividades da disciplina de Programação Orientada a Objetos, sob orientação do professor Carlos.
+🚀 Projeto desenvolvido para fins educacionais.
 
 
 link do jogo: https://fuel-survivor.vercel.app/

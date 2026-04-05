@@ -314,5 +314,4 @@ function main() {
     atualiza()
     requestAnimationFrame(main)
 }
-
 main()
