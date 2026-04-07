@@ -87,6 +87,15 @@ class Carro extends Obj{
     frame = 1
     tempo = 0
 
+    mov_carPrin(){
+        this.y += this.dir
+        if(this.y < 174){
+            this.y = 174
+        }else if(this.y > 486){
+            this.y = 486
+        }
+    }
+
     mov_car(){
         this.y += this.dir
         if(this.y < 174){

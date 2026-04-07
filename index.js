@@ -281,9 +281,10 @@ function desenha() {
 // UPDATE
 function atualiza() {
     if (jogar) {
-        carro.mov_car()
+        carro.mov_carPrin()
 
         if (modo2p) {
+            carro.mov_car()
             carro2.mov_car2()
             carro2.collect(galao)
             carro2.collect(galao2)
